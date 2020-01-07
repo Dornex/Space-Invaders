@@ -1,0 +1,155 @@
+.bg-img {
+    min-height: 100px;
+    background-image: none;
+    background-color: black;
+    border-bottom: solid rgb(19, 18, 18);
+}
+
+#container-enemies {
+    min-height: 300px;
+    
+}
+ 
+#enemy-image {
+    width: 100px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5em;
+    color: rgb(229, 247, 68)
+}
+
+figcaption {
+    align-content: center;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li {
+    font-size: 20px;
+    color: rgb(130, 223, 111);
+}
+
+#containter-enemy-section {
+    background-image: linear-gradient(to bottom, black, white)
+}
+
+figure {
+    border: solid rgb(213, 238, 71);
+    border-radius: 5px;
+    padding: 35px;
+    transition: all 2s;
+}
+
+figure:hover {
+    transform: scale(1.5);
+}
+
+.container-header {
+    text-align: center;
+    font-size: 5.5em;
+    color: rgb(229, 247, 68);
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+#container-movement {
+    background-color: black;
+}
+
+.fas {
+    color: white;
+}
+
+.movement-tutorial-container {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+
+#figure-tutorial-container figcaption {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+}
+
+.fa-s:before {
+    font-family: Arial, serif; /* your font family here! */
+    font-weight: bold;
+    content: 'S';
+    color: white;
+}
+
+#figure-tutorial-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container-article {
+    background-color: black;
+}
+
+ol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ol li {
+    margin: 10px;
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    list-style-type: circle;
+    color: white;
+}
+
+section p {
+    color: white;
+    font-size: 2.5em;
+    text-align: center
+}
+
+.fa-arrow-up {
+    color: black;
+}
+
+.fa-arrow-alt-circle-down {
+    color: yellow;
+}
+
+#enemies {
+    display: grid;
+    align-content: center;
+    margin: 100px;
+    grid-gap: 150px 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+}
+
+@media (max-width: 520px) {
+    #figure-tutorial-container figcaption {
+        font-size: 1.5em;
+    }
+
+    #enemies {
+        margin: 10px;
+        grid-gap: 50px 0;
+    }
+
+    #container-header {
+        font-size: 3.5em;
+    }
+
+    section p {
+        font-size: 1.5em;
+    }
+}

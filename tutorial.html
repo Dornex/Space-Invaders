@@ -1,0 +1,131 @@
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Space Invaders Tutorial</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./tutorial.css">
+        <script src="https://kit.fontawesome.com/1714457612.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="bg-img">
+            <div class="container">
+                <nav class="navbar">
+                    <a href="index.html">Home</a>
+                    <a href="game.html">Game</a>
+                    <a href="index.html#about">About</a>
+                    <a href="#">Leaderboard</a>
+                    <div class="dropdown">
+                        <a href="tutorial.html">Tutorial<i class="fas fa-arrow-alt-circle-down fa-sm"></i></a>
+                        <div class="dropdown-content">
+                            <a href="tutorial.html#container-movement">Movement</a>
+                            <a href="tutorial.html#container-article">Objective</a>
+                            <a href="tutorial.html#containter-enemy-section">Enemies</a>
+                        </div>
+                    </div>
+                    <a href="signUp.html">Sign Up</a>
+                </nav>
+                <div class="menu-toggle"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
+            </div>  
+        </div>
+
+        <div id="container-movement">
+            <header class="container-header">Movement</header>
+            <div class="movement-tutorial-container">
+                <figure id="figure-tutorial-container">
+                        <i class="fas fa-arrow-left fa-4x"></i>
+                        <figcaption>
+                            Move to the left
+                        </figcaption>
+                </figure>
+                <figure id="figure-tutorial-container">
+                        <i class="fa fa-s fa-4x"></i>
+                        <figcaption>
+                            Shoot
+                        </figcaption>
+                </figure>
+                <figure id="figure-tutorial-container">
+                        <i class="fas fa-arrow-right fa-4x"></i>
+                        <figcaption>
+                            Move to the right
+                        </figcaption>
+                </figure> 
+            </div>
+        </div>
+
+        <article id="container-article">
+            <header class="container-header">Objective</header>
+            <div>
+                <ol>
+                    <li>Using the movement controls, you have to destroy each wave of enemies.</li>
+                    <li>As you progress, the enemies will become harder to defeat.</li>
+                    <li>When destroyed, enemies have a small chance to upgrade your weapon damage.</li>
+                    <li>Lastly, <span style="color: yellow">HAVE FUN</span> and try to get on the top of leaderboard!</li>
+                </ol>
+            </div>
+        </article>
+
+        <section id="containter-enemy-section">
+            <header class="container-header">Enemies</header>
+            <p>Here I introduced a grid of enemies. Each enemy has different name, health, attack, image and color.</p>
+            <div id="container-enemies">
+                <div id="enemies">
+                    <figure>
+                        <img id="enemy-image" src="./assets/enemy.png" alt="enemy">
+                        <figcaption>
+                            <ul>
+                                <li>Name: Hehe</li>
+                                <li>Health: 1</li>
+                                <li>Attack: 1</li>
+                                <li>Color: red</li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img id="enemy-image" src="./assets/enemy.png" alt="enemy">
+                        <figcaption>
+                            <ul>
+                                    <li>Name: Hehe</li>
+                                    <li>Health: 1</li>
+                                    <li>Attack: 1</li>
+                                    <li>Color: red</li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img id="enemy-image" src="./assets/enemy.png" alt="enemy">
+                        <figcaption>Easiest enemy</figcaption>
+                    </figure>
+                    <figure>
+                        <img id="enemy-image" src="./assets/enemy.png" alt="enemy">
+                        <figcaption>Easiest enemy</figcaption>
+                    </figure>
+                    <figure>
+                        <img id="enemy-image" src="./assets/enemy.png" alt="enemy">
+                        <figcaption>Easiest enemy</figcaption>
+                    </figure>
+                    <figure>
+                        <img id="enemy-image" src="./assets/enemy.png" alt="enemy">
+                        <figcaption>Easiest enemy</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <a href="#" class="button btn-pos"><i class="fas fa-arrow-up"></i> To the top</a>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/dorneanueduardgabriel"><i class="fab fa-facebook-square fa-cog fa-2x"></i></a>
+                <a href="https://www.instagram.com/dorneanu_eduard"><i class="fab fa-instagram fa-cog fa-2x"></i></a>
+                <a href="#"><i class="fab fa-snapchat-square fa-cog fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/dorneanu-eduard-gabriel-329751172/"><i class="fab fa-linkedin fa-cog fa-2x"></i></a>
+            </div>
+        </footer>
+        <script type="text/javascript">
+            window.onload = () => {
+                document.querySelector(".menu-toggle").addEventListener('click', function() {
+                    document.querySelector('nav').classList.toggle('active');
+                }); 
+            }
+        </script>
+    </body>
+</html>
