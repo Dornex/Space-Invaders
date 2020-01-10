@@ -1,0 +1,26 @@
+.navbar {
+    background-color: black;
+}
+
+#table-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+}
+
+table, th, td {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: 2px solid black;
+    font-size: 50px;
+}
+
+table {
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}

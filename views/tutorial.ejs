@@ -1,0 +1,106 @@
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Space Invaders Tutorial</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./tutorial.css">
+    <script src="https://kit.fontawesome.com/1714457612.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="bg-img">
+    <% include partials/navbar %>
+</div>
+
+<div id="container-movement">
+    <header class="container-header">Movement</header>
+    <div class="movement-tutorial-container">
+        <figure id="figure-tutorial-container">
+            <i class="fas fa-arrow-left fa-4x"></i>
+            <figcaption>
+                Move to the left
+            </figcaption>
+        </figure>
+        <figure id="figure-tutorial-container">
+            <i class="fa fa-s fa-4x"></i>
+            <figcaption>
+                Shoot
+            </figcaption>
+        </figure>
+        <figure id="figure-tutorial-container">
+            <i class="fas fa-arrow-right fa-4x"></i>
+            <figcaption>
+                Move to the right
+            </figcaption>
+        </figure>
+    </div>
+</div>
+
+<article id="container-article">
+    <header class="container-header">Objective</header>
+    <div>
+        <ol>
+            <li>Using the movement controls, you have to destroy each wave of enemies.</li>
+            <li>As you progress, the enemies will become harder to defeat.</li>
+            <li>When destroyed, enemies have a small chance to upgrade your weapon damage.</li>
+            <li>Lastly, <span style="color: yellow">HAVE FUN</span> and try to get on the top of leaderboard!</li>
+        </ol>
+    </div>
+</article>
+
+<section id="containter-enemy-section">
+    <header class="container-header">Enemies</header>
+    <p>Here I introduced a grid of enemies. Each enemy has different name, health, attack, image and color.</p>
+    <div id="container-enemies">
+        <div id="enemies">
+            <figure>
+                <img id="enemy-image" src="./assets/enemy.png" alt="enemy">
+                <figcaption>
+                    <ul>
+                        <li>Name: Hehe</li>
+                        <li>Health: 1</li>
+                        <li>Attack: 1</li>
+                        <li>Color: red</li>
+                    </ul>
+                </figcaption>
+            </figure>
+            <figure>
+                <img id="enemy-image" src="./assets/enemy.png" alt="enemy">
+                <figcaption>
+                    <ul>
+                        <li>Name: Hehe</li>
+                        <li>Health: 1</li>
+                        <li>Attack: 1</li>
+                        <li>Color: red</li>
+                    </ul>
+                </figcaption>
+            </figure>
+            <figure>
+                <img id="enemy-image" src="./assets/enemy.png" alt="enemy">
+                <figcaption>Easiest enemy</figcaption>
+            </figure>
+            <figure>
+                <img id="enemy-image" src="./assets/enemy.png" alt="enemy">
+                <figcaption>Easiest enemy</figcaption>
+            </figure>
+            <figure>
+                <img id="enemy-image" src="./assets/enemy.png" alt="enemy">
+                <figcaption>Easiest enemy</figcaption>
+            </figure>
+            <figure>
+                <img id="enemy-image" src="./assets/enemy.png" alt="enemy">
+                <figcaption>Easiest enemy</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<% include partials/footer%>
+<script type="text/javascript">
+    window.onload = () => {
+        document.querySelector(".menu-toggle").addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    }
+</script>
+</body>
+</html>

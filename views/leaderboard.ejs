@@ -1,0 +1,38 @@
+<html lang="ro">
+<head>
+    <title>Space Invaders</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="leaderboards.css">
+    <script src="https://kit.fontawesome.com/1714457612.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<% include partials/navbar %>
+<div id="table-container">
+    <div>
+        <table>
+            <tr>
+                <th>No.</th>
+                <th>Username</th>
+                <th>Score</th>
+            </tr>
+            <% console.log(locals.users); %>
+            <% for(let i = 0; i < locals.users.length; i++) { %>
+                <tr>
+                    <td> <%= i + 1 %></td>
+                    <td> <%= users[i].username %></td>
+                    <td> <%= users[i].score %></td>
+                </tr>
+            <% } %>
+        </table>
+    </div>
+</div>
+<% include partials/footer %>
+<script type="text/javascript">
+    window.onload = () => {
+        document.querySelector(".menu-toggle").addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html lang="ro">
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Space Invaders</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1714457612.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="bg-img">
+    <%- include('partials/navbar', {loggedIn: loggedIn}); %>
+    <div class="header-text">
+        <header id="header-container">Reinventing the old <img class="header-img" src="./assets/space-invaders-logo.png" alt="logo"></header>
+        <p></p>
+    </div>
+</div>
+
+<div id="about">
+    <h3>ABOUT</h3>
+    <div class="paragraphs">
+        <p>My name is Dorneanu Eduard-Gabriel, and I'm studying Computer Science at the University of Bucharest. This is my
+            project for 'Introduction to Web' class. My idea behind this project was to learn more things at once: Web Development,
+            how to make Javascript Games and Databases. I knew from the start that this won't be an easy task, but I took the risk
+            anyways.
+        </p>
+        <p>Depending on the state of the game, the goal is to beat all enemies. You get higher score, you get shown on the leaderboard.
+            I am planning to make enemies harder as you play, and give the player lives.
+        </p>
+    </div>
+</div>
+
+<% include partials/footer %>
+<script type="text/javascript">
+    window.onload = () => {
+        document.querySelector(".menu-toggle").addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    }
+</script>
+</body>
 </html>

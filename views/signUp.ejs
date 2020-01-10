@@ -1,0 +1,65 @@
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./signUp.css">
+    <script src="https://kit.fontawesome.com/1714457612.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="bg-img">
+    <% include partials/navbar %>
+</div>
+
+<div id="container-signup">
+    <div id="particles-js">
+        <div id="border-signup">
+            <div id="signup">
+                <header>Sign Up</header>
+                <form method="POST" action="/submit-signup">
+                    <label>
+                        <input type="username" name="username" placeholder="username" required>
+                    </label>
+                    <br>
+                    <label>
+                        <input type="password" name="password"  minlength="7" placeholder="password" required>
+                    </label>
+                    <br>
+                    <label>
+                        <input type="password" name="confirmPassword" minlength="7" placeholder="confirm password" required>
+                    </label>
+                    <br>
+                    <input class="submit-button" type="submit" value="Sign Up">
+                </form>
+                <p id="errorMessage"><%= message1 %></p>
+            </div>
+            <div id="signin">
+                <header>Sign In</header>
+                <form method="POST" action="/submit-signin">
+                    <label>
+                        <input type="text" name="username" placeholder="username">
+                    </label>
+                    <br>
+                    <label>
+                        <input type="password" name="password" placeholder="password">
+                    </label>
+                    <br>
+                    <input class="submit-button" type="submit" value="Sign In">
+                </form>
+                <p id="errorMessage"><%= message2 %></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>
+<script type="text/javascript">
+    document.onload = () => {
+        document.querySelector(".menu-toggle").addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    }
+</script>
+</body>
+</html>

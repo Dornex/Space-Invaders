@@ -227,6 +227,12 @@ let initialBackground = document.getElementById("background").style;
 checkGameOver = () => {
     if(lives === 0) {
         clearTimeout(timeoutID);
+
+        let xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "/submitScore", true);
+        xhttp.setRequestHeader("Content-Type", "application/json");
+        xhttp.send(JSON.stringify({score: score}));
+
         let backgroundStyle = document.getElementById("background").style;
         backgroundStyle.backgroundImage = "url(assets/gameover.jpg)";
         backgroundStyle.backgroundRepeat = "no-repeat";
