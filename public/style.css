@@ -20,7 +20,7 @@ html {
 .bg-img {
     image-rendering: pixelated;
     -ms-interpolation-mode: nearest-neighbor;
-    background-image: url("assets/cover.jpg");
+    background-image: url("assets/background0.jpg");
     min-height: 800px;
     background-position: center;
     background-repeat: no-repeat;
@@ -232,4 +232,17 @@ footer {
     .dropdown:hover .dropdown-content {
         visibility: hidden;
     }
+}
+
+#mousePos {
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 80%;
+    font-size: 2em;
+}
+
+.blue {
+    color: blue;
 }

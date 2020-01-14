@@ -267,6 +267,17 @@ checkGameOver = () => {
     }
 };
 
+checkNextLevel = () => {
+    if(enemies.length === 0) {
+        setTimeout(() => {
+            enemies = Array.from(initialEnemies);
+            for(let enemy = 0; enemy < enemies.length; enemy++) {
+                enemies[enemy].top = enemies[enemy].initialTop;
+            }
+        }, 3000);
+    }
+};
+
 let timeoutID;
 gameLoop = () => {
     timeoutID = setTimeout(gameLoop, 20);
@@ -281,6 +292,7 @@ gameLoop = () => {
     drawEnemyMissiles();
     moveEnemyMissiles();
     checkGameOver();
+    checkNextLevel();
     currentTime = new Date();
 };
 

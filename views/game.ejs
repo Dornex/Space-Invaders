@@ -3,6 +3,7 @@
     <title>Space Invaders</title>
     <link rel="stylesheet" href="game.css">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="./script.js"></script>
     <script src="https://kit.fontawesome.com/1714457612.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -22,13 +23,6 @@
     </div>
 
     <% include partials/footer %>
-    <script type="text/javascript">
-        window.onload = () => {
-            document.querySelector(".menu-toggle").addEventListener('click', function() {
-                document.querySelector('nav').classList.toggle('active');
-            });
-        }
-    </script>
     <script src="game.js"></script>
 </body>
 </html>

@@ -7,7 +7,22 @@ const MongoClient = require('mongodb').MongoClient;
 const session = require('express-session');
 
 const uri = "mongodb+srv://dornex:wOZUjiirZmojS814@website-db-gl5ab.mongodb.net/test?retryWrites=true&w=majority";
-const client = new MongoClient(uri, {useNewUrlParser: true, useUnifiedTopology: true});
+const client = new MongoClient(uri,
+    {   useNewUrlParser: true,
+        useUnifiedTopology: true,
+        server: {
+            socketOptions: {
+                keepAlive:300000,
+                connectTimeoutMS: 30000
+            }
+        },
+        replset: {
+            socketOptions: {
+                keepAlive:300000,
+                connectTimeoutMS: 30000
+            }
+        }
+    });
 const app = express();
 
 client.connect(err => {
@@ -168,20 +183,8 @@ client.connect(err => {
         }
     });
 
-// catch 404 and forward to error handler
-    app.use(function(req, res, next) {
-        next(createError(404));
-    });
-
-// error handler
-    app.use(function(err, req, res, next) {
-        // set locals, only providing error in development
-        res.locals.message = err.message;
-        res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-        // render the error page
-        res.status(err.status || 500);
-        res.render('error');
+    app.use(function(req, res) {
+       res.status(404).render('error', {'message': "Error 404! Pagina nu exista!"});
     });
 });
 
