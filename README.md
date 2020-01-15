@@ -9,3 +9,7 @@ University project for Web Techniques course. It is a website which is a present
 3. MongoDB for database
 4. Heroku for hosting the website
 5. eJS for templates 
+
+## Links
+
+Link for game: new-space-invaders.herokuapp.com
