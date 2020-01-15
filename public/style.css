@@ -246,3 +246,15 @@ footer {
 .blue {
     color: blue;
 }
+
+iframe {
+    height: 700px;
+    width: 900px;
+    position: relative;
+}
+
+#iframeDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

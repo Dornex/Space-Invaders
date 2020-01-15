@@ -29,9 +29,9 @@ client.connect(err => {
     if(err) return console.log(err);
     let db = client.db('website-db');
 
+
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'ejs');
-
     app.use(session({
         secret: 'dog',
         resave: true,
@@ -43,7 +43,7 @@ client.connect(err => {
     app.use(express.json());
     app.use(express.urlencoded({ extended: false }));
     app.use(cookieParser());
-    app.use(express.static(path.join(__dirname + '/public')));
+    app.use(express.static(path.join(__dirname, '/public')));
 
     app.get('/', (req, res) => {
         if(req.session.sessionID !== undefined)
