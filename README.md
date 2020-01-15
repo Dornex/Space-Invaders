@@ -1,5 +1,11 @@
-# Proiect-Tehnici-Web
+# Space Invaders
 
-Final project for the Web Techniques course.
+University project for Web Techniques course. It is a website which is a presentation for the game Space Invaders. It also has a Javascript implementation of the game. The website includes a leaderboard with the highest scores, and I'm using MongoDB to save the users and scores in the database.
 
-This is a presentation page for a game I made using only Javascript. The game is a copy of Space Invaders, to which I added a lot more interesting progression.
+## Tools
+
+1. NodeJS + Express ( for the web server )
+2. Javascript ( for website animations and game )
+3. MongoDB for database
+4. Heroku for hosting the website
+5. eJS for templates 
